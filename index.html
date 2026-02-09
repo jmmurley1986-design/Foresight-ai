@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>IT WORKS 🚀</h1>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
 <head>
 <title>AI Problem Solver</title>
 <style>
@@ -32,6 +26,7 @@ button {
   margin-top: 20px;
   font-size: 20px;
   color: #00ff99;
+  white-space: pre-wrap;
 }
 </style>
 </head>
@@ -48,16 +43,21 @@ button {
 <div id="result"></div>
 
 <script>
-<button onclick="solveProblem()">Ask AI</button>
+async function solveProblem() {
+  let input = document.getElementById("userInput").value;
+  if(input === "") {
+    alert("Type something!");
+    return;
+  }
 
-<div id="result"></div>
+  document.getElementById("result").innerHTML = "🤖 Thinking...";
 
-<script>
-PASTE NEW SCRIPT HERE
+  // TEST MODE (no API yet)
+  document.getElementById("result").innerHTML =
+    "AI Response: Here are 3 ideas for " + input +
+    "<br>1) Freelance services<br>2) Start a niche website<br>3) Sell digital products";
+}
 </script>
-
-</body>
-</html></script>
 
 </body>
 </html>
