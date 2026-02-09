@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Problem Solver</title>
+<title>AI Prompt Solver</title>
 <style>
 body {
   font-family: Arial;
-  background: black;
+  background: #0b0b0b;
   color: white;
   text-align: center;
   padding: 40px;
@@ -18,44 +18,45 @@ textarea {
 button {
   padding: 15px 30px;
   font-size: 18px;
-  background: #00ff99;
+  background: #00ffcc;
   border: none;
   cursor: pointer;
 }
 #result {
   margin-top: 20px;
   font-size: 20px;
-  color: #00ff99;
-  white-space: pre-wrap;
+  color: #00ffcc;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🚀 AI Problem Solver</h1>
-<p>Type any problem or idea. AI will help you.</p>
+<h1>🤖 AI Prompt Solver</h1>
+<p>Ask anything about money, business, life, or ideas.</p>
 
-<textarea id="userInput" placeholder="How can I make money online?"></textarea>
+<textarea id="userInput" placeholder="How can I make $100 in 3 hours?"></textarea>
 <br><br>
+
 <button onclick="solveProblem()">Ask AI</button>
 
 <div id="result"></div>
 
 <script>
-async function solveProblem() {
+function solveProblem() {
   let input = document.getElementById("userInput").value;
   if(input === "") {
     alert("Type something!");
     return;
   }
 
-  document.getElementById("result").innerHTML = "🤖 Thinking...";
+  // Smart fake AI (for now)
+  let response = "Here are 3 fast ways to make $100 in 3 hours:\n\n";
+  response += "1) Offer local services (cleaning, yard work, moving help)\n";
+  response += "2) Sell items on Facebook Marketplace or OfferUp\n";
+  response += "3) Do quick freelance gigs on Fiverr or Upwork\n";
 
-  // TEST MODE (no API yet)
-  document.getElementById("result").innerHTML =
-    "AI Response: Here are 3 ideas for " + input +
-    "<br>1) Freelance services<br>2) Start a niche website<br>3) Sell digital products";
+  document.getElementById("result").innerText = response;
 }
 </script>
 
