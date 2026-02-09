@@ -4,3 +4,63 @@
 <h1>IT WORKS 🚀</h1>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Problem Solver</title>
+<style>
+body {
+  font-family: Arial;
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+textarea {
+  width: 80%;
+  height: 120px;
+  font-size: 18px;
+}
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background: #00ff99;
+  border: none;
+  cursor: pointer;
+}
+#result {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #00ff99;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🚀 AI Problem Solver</h1>
+<p>Type any problem or idea. AI will help you.</p>
+
+<textarea id="userInput" placeholder="How can I make money online?"></textarea>
+<br><br>
+<button onclick="solveProblem()">Ask AI</button>
+
+<div id="result"></div>
+
+<script>
+function solveProblem() {
+  let input = document.getElementById("userInput").value;
+  if(input === "") {
+    alert("Type something!");
+    return;
+  }
+
+  // Fake AI response (for now)
+  document.getElementById("result").innerHTML =
+    "🤖 AI says: Here are 3 ideas for: <b>" + input + "</b><br><br>" +
+    "1) Start a niche blog<br>2) Create an AI tool website<br>3) Offer freelance services on Fiverr";
+}
+</script>
+
+</body>
+</html>
